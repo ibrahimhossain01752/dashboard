@@ -1,0 +1,11 @@
+.sidebar ul li:hover{
+    background-color: gray;
+    color:blue;
+}
+.sidebar ul li:hover a{
+    color:blue;
+}
+.active{
+    background-color: gray;
+    border-radius: 5px;
+}
