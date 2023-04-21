@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const [active, setActive] = useState(1);
@@ -14,31 +15,31 @@ const Sidebar = () => {
                 <ul class="nav nav-pills flex-column mt-2">
                     <li class={active ===1 ? "active nav-item p-2":"nav-item p-2"} 
                     onClick={e => setActive(1)}>
-                        <span  class="text-decoration-none text-white" href="">
+                        <Link to="/"  class="text-decoration-none text-white" href="">
                            <i class="bi bi-speedometer me-3"></i>
                            <span class="fs-5"><strong>Dashboard</strong></span>
-                        </span>
+                        </Link>
                     </li>
                     <li class={active ===2 ? "active nav-item p-2":"nav-item p-2"} 
                     onClick={e => setActive(2)}>
-                        <span  class="text-decoration-none text-white" href="">
+                        <Link to="/users"  class="text-decoration-none text-white" href="">
                             <i class="bi bi-people me-3"></i>
                            <span class="fs-5"><strong>Users</strong></span>
-                        </span>
+                        </Link>
                     </li>
                     <li class={active ===3 ? "active nav-item p-2":"nav-item p-2"} 
                     onClick={e => setActive(3)}>
-                        <span  class="text-decoration-none text-white" href="">
+                        <Link to="/orders"  class="text-decoration-none text-white" href="">
                         <i class="bi bi-border-middle me-3"></i>
                            <span class="fs-5"><strong>Orders</strong></span>
-                        </span>
+                        </Link>
                     </li>
                     <li class={active ===4 ? "active nav-item p-2":"nav-item p-2"} 
                     onClick={e => setActive(4)}>
-                        <span  class="text-decoration-none text-white" href="">
+                        <Link to="/report"  class="text-decoration-none text-white" href="">
                         <i class="bi bi-border-all me-3"></i>
                            <span class="fs-5"><strong>Report</strong></span>
-                        </span>
+                        </Link>
                     </li>
 
                 </ul>
