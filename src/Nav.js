@@ -1,10 +1,14 @@
 import React from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
 
-const Nav = () => {
+const Nav = ({Toggle}) => {
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Dashboard</a>
+    <a class="navbar-brand d-none d-md-block" href="#">Dashboard</a>
+    <a class="navbar-brand d-block d-md-none" onclick={Toggle}>
+      <i class="bi bi-justify"></i>
+      </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
